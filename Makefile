@@ -1,5 +1,10 @@
 .PHONY: run rm install
 
+.venv:
+	# builing a virtual environ
+	python3 -m venv .venv
+	@echo "Type source .venv/bin/activate"
+
 install:
 	pip install -U pip setuptools wheel
 	pip install -r requirements.txt
